@@ -28,4 +28,10 @@ RUN cd /root/ngx_openresty-$OPENRESTY_VERSION \
  && apt-get autoremove -y \
  && apt-get clean -y
 
+RUN apt-get -y install supervisor && \
+  mkdir -p /var/log/supervisor && \
+  mkdir -p /etc/supervisor/conf.d
+
 EXPOSE 80
+
+CMD ["supervisord", "-c", "/etc/supervisor/supervisor.conf"]
