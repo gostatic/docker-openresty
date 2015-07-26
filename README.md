@@ -35,9 +35,3 @@ command=/opt/openresty/nginx/sbin/nginx -c conf/nginx.conf
 autorestart=true
 priority=1
 ```
-
-
-
-## Credits
-
-Original inspiration from [3scale/openresty](https://github.com/3scale/docker-openresty).
