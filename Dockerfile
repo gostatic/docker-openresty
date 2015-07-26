@@ -2,10 +2,11 @@ FROM alpine:3.2
 MAINTAINER Marc Qualie <marc@marcqualie.com>
 
 ENV OPENRESTY_VERSION=1.7.10.2
-ENV PACKAGES="readline-dev ncurses-dev pcre-dev openssl-dev perl make build-base supervisor"
+ENV PACKAGES="readline-dev ncurses-dev pcre-dev openssl-dev perl make build-base"
 ADD ngx_openresty-$OPENRESTY_VERSION.tar.gz /root/
 RUN apk update \
  && apk add $PACKAGES \
+ && apk add supervisor \
  && cd /root/ngx_openresty-$OPENRESTY_VERSION \
  && ./configure \
     --prefix=/opt/openresty \
