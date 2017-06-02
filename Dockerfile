@@ -9,7 +9,6 @@ RUN cd /root/openresty-$OPENRESTY_VERSION \
  && apt-get install -y libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl make build-essential supervisor \
  && ./configure \
     --prefix=/opt/openresty \
-    --with-luajit --with-luajit-xcflags=-DLUAJIT_ENABLE_LUA52COMPAT \
     --with-http_v2_module \
     --without-http_fastcgi_module \
     --without-http_uwsgi_module \
