@@ -3,10 +3,17 @@
 This is the base configuration for our hosted CDN. We use this minimal starting point to expand where needed for different services.
 
 
+## Version
+
+We are currently using OpenResty 1.11.2.3
+
+[https://openresty.org/download/openresty-1.11.2.3.tar.gz](https://openresty.org/download/openresty-1.11.2.3.tar.gz)
+
+
 
 ## Example Usage
 
-The following two lines are all that is needed to get up and running with openresty on Docker.
+The following two lines are all that is needed to get up and running with Openresty on Docker.
 
 ``` dockerfile
 FROM gostatic/openresty:latest
