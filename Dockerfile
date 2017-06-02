@@ -10,6 +10,7 @@ RUN cd /root/openresty-$OPENRESTY_VERSION \
  && ./configure \
     --prefix=/opt/openresty \
     --with-luajit --with-luajit-xcflags=-DLUAJIT_ENABLE_LUA52COMPAT \
+    --with-http_v2_module \
     --without-http_fastcgi_module \
     --without-http_uwsgi_module \
     --without-http_scgi_module \
@@ -29,4 +30,5 @@ RUN cd /root/openresty-$OPENRESTY_VERSION \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 80
+EXPOSE 443
 CMD ["supervisord", "-c", "/etc/supervisor/supervisor.conf"]
